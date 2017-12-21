@@ -26684,6 +26684,10 @@ var _AuthPage = __webpack_require__(257);
 
 var _AuthPage2 = _interopRequireDefault(_AuthPage);
 
+var _AccountPage = __webpack_require__(260);
+
+var _AccountPage2 = _interopRequireDefault(_AccountPage);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App() {
@@ -26694,7 +26698,8 @@ var App = function App() {
     _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/search', component: _Search2.default }),
     _react2.default.createElement(_reactRouterDom.Route, { path: '/basket', component: _BasketPage2.default }),
     _react2.default.createElement(_reactRouterDom.Route, { path: '/product-description', component: _ProductDescriptionPage2.default }),
-    _react2.default.createElement(_reactRouterDom.Route, { path: '/auth', component: _AuthPage2.default })
+    _react2.default.createElement(_reactRouterDom.Route, { path: '/auth', component: _AuthPage2.default }),
+    _react2.default.createElement(_reactRouterDom.Route, { path: '/account', component: _AccountPage2.default })
   );
 };
 
@@ -27656,7 +27661,11 @@ var AuthPage = function AuthPage() {
       { className: 'auth_pass' },
       _react2.default.createElement('input', { placeholder: 'Password' })
     ),
-    _react2.default.createElement(_Button2.default, { text: rrr }),
+    _react2.default.createElement(
+      'button',
+      { className: 'auth_in' },
+      'Sign in'
+    ),
     _react2.default.createElement(
       _reactRouterDom.Link,
       { to: '/account' },
@@ -27673,6 +27682,87 @@ exports.default = AuthPage;
 
 /***/ }),
 /* 259 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 260 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _AccountPage = __webpack_require__(261);
+
+Object.defineProperty(exports, 'default', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_AccountPage).default;
+  }
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 261 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(262);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var AccountPage = function AccountPage() {
+  return _react2.default.createElement(
+    'div',
+    { className: 'account' },
+    _react2.default.createElement(
+      'div',
+      { className: 'account_firstname' },
+      _react2.default.createElement('input', { placeholder: 'First Name' })
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'account_secondname' },
+      _react2.default.createElement('input', { placeholder: 'Second Name' })
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'account_email' },
+      _react2.default.createElement('input', { placeholder: 'Email' })
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'account_pass' },
+      _react2.default.createElement('input', { placeholder: 'Password' })
+    ),
+    _react2.default.createElement(
+      'button',
+      { className: 'account_in' },
+      'Create account'
+    )
+  );
+};
+
+exports.default = AccountPage;
+
+/***/ }),
+/* 262 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

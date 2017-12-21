@@ -11,7 +11,9 @@ const AuthPage = () => (
     <div className="auth_pass">
       <input placeholder="Password" />
     </div>
-    <Button text={rrr} />
+    <button className="auth_in">
+        Sign in
+    </button>
     <Link to="/account"><p>Create Account</p></Link>
   </div>
 );
