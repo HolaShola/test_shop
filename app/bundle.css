@@ -1,0 +1,155 @@
+.AppTitle {
+	background: #534b42;
+	height: 50px;
+}
+
+.AppTitle a {
+	text-decoration: none;
+}
+
+.AppTitle p {
+	display: inline-block;
+	color: #f43659;
+	font-size: 22px;
+	padding: 12px 0 0 0;
+}.header_search_wrapper {
+    padding: 0 50px;
+}
+
+.header_search {
+    display: flex;
+    flex-direction: column;
+}
+
+.header_search input:first-child {
+	box-sizing: border-box;
+	height: 50px;
+	background-color: #000;
+	border-bottom: 2px solid #f43659;
+	padding: 0 0 0 30px;
+	color: #fff;
+	font-size: 20px;
+}
+.header_search a > button {
+	float: right;
+	width: 20%;
+	height: 45px;
+	margin: 20px 0 0 0;
+	background-color: #f43659;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 20px;
+	cursor: pointer;
+}
+.header_search a > button:hover {
+	background-color: #983c47;
+	color: #827b7d;
+}
+.btn-raised {
+    margin: 0 10px;
+    padding: 5px 20px;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 3px;
+    text-transform: uppercase;
+    background-color: #3f3c40;
+}
+
+.btn-flat {
+    font-size: 20px;
+	margin: 0 15px;
+	background-color: transparent;
+}
+
+.btn-raised.btn-active {
+    background-color: #f43659;
+}
+
+.btn-flat.btn-active {
+    color: #f43659;
+}.Header {
+	background: #534b42;
+	padding-bottom: 40px;
+}
+
+.Header a {
+	text-decoration: none;
+}
+
+.Header p {
+	color: #f43659;
+	font-size: 22px;
+	padding: 12px 0 0 0;
+}.one_book {
+	margin: 30px 20px
+}
+
+.film_description {
+	margin-top: 10px;
+}
+
+.film_description .release_year {
+	float: right;
+	border: 2px solid #969696;
+	border-radius: 5px;
+	padding: 4px 15px;
+}
+
+.film_description .show_title {
+	text-transform: uppercase;
+	font-size: 20px;
+}
+
+.film_description .category {
+	font-size: 18px;
+}
+
+.discography {
+	padding: 0 10px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}.Footer {
+	background: #534b42;
+	height: 50px;
+	margin-top: 30px;
+}
+.Footer .footer_label {
+	padding: 0 100px;
+	line-height: 50px;
+}
+.Footer .footer_label a {
+	text-decoration: none;
+}
+.Footer p {
+	color: #f43659;
+	font-size: 22px;
+}* {
+    padding: 0px;
+    margin: 0px;
+}.header_down {
+	display: flex;
+	flex-direction: row;
+}
+.header_img_description {
+	color: rgb(0, 0, 0);
+	padding: 0 40px 0 70px;
+}
+.header_img_description .show_title {
+    font-size: 35px;
+    color: #f43659;
+	padding: 10px 0;
+	text-align: center;
+}
+.header_img_description .author_name {
+	font-size: 24px;
+	text-align: center;
+	color: #f43659;
+}
+.header_img_description .book_price {
+	font-size: 20px;
+	text-align: center;
+	color: #f43659;
+    padding: 20px 0;
+}
+/*# sourceMappingURL=bundle.css.map*/

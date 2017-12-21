@@ -1,0 +1,25 @@
+.header_down {
+	display: flex;
+	flex-direction: row;
+}
+.header_img_description {
+	color: rgb(0, 0, 0);
+	padding: 0 40px 0 70px;
+}
+.header_img_description .show_title {
+    font-size: 35px;
+    color: #f43659;
+	padding: 10px 0;
+	text-align: center;
+}
+.header_img_description .author_name {
+	font-size: 24px;
+	text-align: center;
+	color: #f43659;
+}
+.header_img_description .book_price {
+	font-size: 20px;
+	text-align: center;
+	color: #f43659;
+    padding: 20px 0;
+}

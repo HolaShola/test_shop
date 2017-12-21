@@ -5,18 +5,20 @@ module.exports = {
 
   context: path.resolve(__dirname, 'app'),
 
-  entry: './index.js',
+  entry: './index.jsx',
 
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'app'),
   },
 
+  devtool: 'source-map',
+
   resolve: {
     extensions: ['.js', '.jsx'],
   },
 
-  watch: false,
+  watch: true,
 
   module: {
     loaders: [{
