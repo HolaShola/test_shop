@@ -27639,10 +27639,6 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(20);
 
-var _Button = __webpack_require__(104);
-
-var _Button2 = _interopRequireDefault(_Button);
-
 __webpack_require__(259);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -27652,32 +27648,40 @@ var AuthPage = function AuthPage() {
     'div',
     { className: 'auth' },
     _react2.default.createElement(
-      'div',
-      { className: 'auth_email' },
-      _react2.default.createElement('input', { placeholder: 'Email' })
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'auth_pass' },
-      _react2.default.createElement('input', { placeholder: 'Password' })
-    ),
-    _react2.default.createElement(
-      'button',
-      { className: 'auth_in' },
-      'Sign in'
-    ),
-    _react2.default.createElement(
-      _reactRouterDom.Link,
-      { to: '/account' },
+      'form',
+      { action: '' },
       _react2.default.createElement(
-        'p',
-        null,
-        'Create Account'
+        'div',
+        { className: 'auth_email' },
+        _react2.default.createElement('input', { type: 'email', placeholder: 'Email' })
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'auth_pass' },
+        _react2.default.createElement('input', { type: 'password', placeholder: 'Password' })
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'auth_in' },
+        _react2.default.createElement('input', { type: 'submit', value: 'Sign in' })
+      )
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'create_account' },
+      _react2.default.createElement(
+        _reactRouterDom.Link,
+        { to: '/account' },
+        _react2.default.createElement(
+          'p',
+          null,
+          'Create Account'
+        )
       )
     )
   );
 };
-
+// import Button from '../Button';
 exports.default = AuthPage;
 
 /***/ }),
@@ -27732,29 +27736,33 @@ var AccountPage = function AccountPage() {
     'div',
     { className: 'account' },
     _react2.default.createElement(
-      'div',
-      { className: 'account_firstname' },
-      _react2.default.createElement('input', { placeholder: 'First Name' })
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'account_secondname' },
-      _react2.default.createElement('input', { placeholder: 'Second Name' })
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'account_email' },
-      _react2.default.createElement('input', { placeholder: 'Email' })
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'account_pass' },
-      _react2.default.createElement('input', { placeholder: 'Password' })
-    ),
-    _react2.default.createElement(
-      'button',
-      { className: 'account_in' },
-      'Create account'
+      'form',
+      { action: '' },
+      _react2.default.createElement(
+        'div',
+        { className: 'account_firstname' },
+        _react2.default.createElement('input', { placeholder: 'First Name' })
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'account_secondname' },
+        _react2.default.createElement('input', { placeholder: 'Second Name' })
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'account_email' },
+        _react2.default.createElement('input', { placeholder: 'Email' })
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'account_pass' },
+        _react2.default.createElement('input', { placeholder: 'Password' })
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'account_in' },
+        _react2.default.createElement('input', { type: 'submit', value: 'Create account' })
+      )
     )
   );
 };

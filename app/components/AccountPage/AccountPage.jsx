@@ -3,21 +3,23 @@ import './AccountPage.css';
 
 const AccountPage = () => (
   <div className="account">
-    <div className="account_firstname">
-      <input placeholder="First Name" />
-    </div>
-    <div className="account_secondname">
-      <input placeholder="Second Name" />
-    </div>
-    <div className="account_email">
-      <input placeholder="Email" />
-    </div>
-    <div className="account_pass">
-      <input placeholder="Password" />
-    </div>
-    <button className="account_in">
-        Create account
-    </button>
+    <form action="">
+      <div className="account_firstname">
+        <input placeholder="First Name" />
+      </div>
+      <div className="account_secondname">
+        <input placeholder="Second Name" />
+      </div>
+      <div className="account_email">
+        <input placeholder="Email" />
+      </div>
+      <div className="account_pass">
+        <input placeholder="Password" />
+      </div>
+      <div className="account_in">
+        <input type="submit" value="Create account" />
+      </div>
+    </form>
   </div>
 );
 
