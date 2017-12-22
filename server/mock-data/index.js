@@ -1,4 +1,4 @@
-export default let data = [
+const data = [
   {
     id: '1',
     username: 'User1',
@@ -12,3 +12,5 @@ export default let data = [
     password: 'User2pass',
   },
 ];
+
+module.exports = data;

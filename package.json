@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack",
     "server": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "jw": "babel-node ./server/app.js --presets es2015,stage-2"
   },
   "author": "",
   "license": "ISC",
@@ -18,7 +19,7 @@
     "babel-preset-es2015": "6.24.1",
     "babel-preset-react": "6.24.1",
     "babel-preset-stage-2": "6.24.1",
-    "babel-register": "6.24.1",
+    "babel-register": "^6.24.1",
     "css-loader": "^0.28.7",
     "eslint": "^4.13.1",
     "eslint-config-airbnb": "^16.1.0",
@@ -37,6 +38,7 @@
     "express": "^4.16.2",
     "extract-text-webpack-plugin": "^3.0.0",
     "jsonwebtoken": "^8.1.0",
+    "lodash": "^4.17.4",
     "mongoose": "^4.13.7",
     "morgan": "^1.9.0",
     "prop-types": "^15.5.10",
