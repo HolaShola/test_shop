@@ -6,12 +6,19 @@ const router = express.Router();
 const User = require('../models/userSchema');
 
 router
-  .route('/auth')
+  .route('/users')
+  .get((req, res) => {
+    User.find((err, users) => {
+      if (err) res.status(500).send(err);
+      res.status(200).send(users);
+    });
+  })
   .post((req, res) => {
-    User.findOne({ "username": "User2" }, (err, users) => {
+    User.find({}, (err, users) => {
       if (err) return console.error(err);
       console.log(users);
-    })
+    });
+    res.send('gg');
   });
 
  // db.close();

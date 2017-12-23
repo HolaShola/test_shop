@@ -5,6 +5,7 @@ import './AuthPage.css';
 
 const AuthPage = () => (
   <div className="auth">
+    
     <form action="">
       <div className="auth_email">
         <input type="email" placeholder="Email" />

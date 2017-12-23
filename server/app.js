@@ -1,8 +1,7 @@
 import express from 'express';
-import router from './routes';
+import users from './routes/users';
 
 const mongoose = require('mongoose');
-const _ = require('lodash');
 const bodyParser = require('body-parser');
 
 const app = express();
@@ -14,12 +13,13 @@ mongoose.connect('mongodb://localhost/test_shop', {
   connectTimeoutMS: 30000,
 }, (err) => {
   if (err) {
-    console.error('MongoDB connection error: ' + err);
+    console.error(`MongoDB connection error: ' + ${err}`);
     process.exit(1);
   }
 });
 mongoose.Promise = global.Promise;
 
 app.use(bodyParser.json());
-app.use(router);
+app.use('/api', users);
+
 app.listen(port, () => console.log(`App listening on port ${port}!`));
