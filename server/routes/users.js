@@ -1,6 +1,8 @@
 import checkToken from '../middlewares/checkToken';
 
+const _ = require('lodash');
 const express = require('express');
+const jwt = require('jsonwebtoken');
 
 const router = express.Router();
 const User = require('../models/userSchema');
@@ -14,14 +16,23 @@ router
     });
   })
   .post((req, res) => {
-    User.find({}, (err, users) => {
-      if (err) return console.error(err);
-      console.log(users);
+    User.find((err, users) => {
+      if (err) res.status(500).send(err);
+      console.log(req.body.username);
+      const user = _.find(users, { username: req.body.username });
+      
+      if (user === undefined || user.email !== req.body.email) {
+        res.status(403).send({ succes: false, message: 'Bad username/password' });
+      } else {
+        const payload = { 'userName': user.username, 'userEmail': user.email };
+        const token = jwt.sign(payload, 'secret', { expiresIn: 70 });
+        console.log(payload);
+        console.log(token);
+        res.send(token);
+      }
+   //   res.status(200).send(user);
     });
-    res.send('gg');
   });
-
- // db.close();
       
 //  response.writeHead(200, {"Content-Type": "text/html"});
 //  response.end('fh');  
