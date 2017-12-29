@@ -1,6 +1,7 @@
 .AppTitle {
 	background: #534b42;
 	height: 50px;
+	padding: 0 50px;
 }
 
 .AppTitle a {
@@ -12,4 +13,8 @@
 	color: #f43659;
 	font-size: 22px;
 	padding: 12px 0 0 0;
+}
+
+.AppTitle p:last-child {
+	float: right;
 }

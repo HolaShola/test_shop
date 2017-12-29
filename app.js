@@ -1,5 +1,5 @@
 import express from 'express';
-import users from './routes/users';
+import users from './server/routes/users';
 
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -19,6 +19,7 @@ mongoose.connect('mongodb://localhost/test_shop', {
 });
 mongoose.Promise = global.Promise;
 
+app.use(express.static(__dirname));
 app.use(bodyParser.json());
 app.use('/api', users);
 

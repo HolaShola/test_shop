@@ -27633,6 +27633,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
@@ -27643,45 +27645,116 @@ __webpack_require__(259);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var AuthPage = function AuthPage() {
-  return _react2.default.createElement(
-    'div',
-    { className: 'auth' },
-    _react2.default.createElement(
-      'form',
-      { action: '' },
-      _react2.default.createElement(
-        'div',
-        { className: 'auth_email' },
-        _react2.default.createElement('input', { type: 'email', placeholder: 'Email' })
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'auth_pass' },
-        _react2.default.createElement('input', { type: 'password', placeholder: 'Password' })
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'auth_in' },
-        _react2.default.createElement('input', { type: 'submit', value: 'Sign in' })
-      )
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'create_account' },
-      _react2.default.createElement(
-        _reactRouterDom.Link,
-        { to: '/account' },
-        _react2.default.createElement(
-          'p',
-          null,
-          'Create Account'
-        )
-      )
-    )
-  );
-};
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 // import Button from '../Button';
+
+
+var AuthPage = function (_Component) {
+  _inherits(AuthPage, _Component);
+
+  function AuthPage(props) {
+    _classCallCheck(this, AuthPage);
+
+    var _this = _possibleConstructorReturn(this, (AuthPage.__proto__ || Object.getPrototypeOf(AuthPage)).call(this, props));
+
+    _this.handleClickAuth = function (event) {
+      event.preventDefault();
+      fetch('http://localhost:8080/api/users', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'mode': 'no-cors'
+        },
+        body: JSON.stringify({
+          username: _this.state.username,
+          email: _this.state.email
+        })
+      }).then(function (res) {
+        console.log(res);
+      }).catch(function (res) {
+        console.log(res);
+      });
+    };
+
+    _this.handleChangeUsername = function (event) {
+      _this.setState({ username: event.target.value });
+    };
+
+    _this.handleChangeEmail = function (event) {
+      _this.setState({ email: event.target.value });
+    };
+
+    _this.state = {
+      username: '',
+      email: ''
+    };
+    return _this;
+  }
+
+  _createClass(AuthPage, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'auth' },
+        _react2.default.createElement(
+          'form',
+          { action: '' },
+          _react2.default.createElement(
+            'div',
+            { className: 'auth_email' },
+            _react2.default.createElement('input', {
+              type: 'text',
+              placeholder: 'Username',
+              onChange: this.handleChangeUsername
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'auth_pass' },
+            _react2.default.createElement('input', {
+              type: 'Email',
+              placeholder: 'Email',
+              onChange: this.handleChangeEmail
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'auth_in' },
+            _react2.default.createElement('input', {
+              type: 'submit',
+              value: 'Sign in',
+              onClick: this.handleClickAuth
+            })
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'create_account' },
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: '/account' },
+            _react2.default.createElement(
+              'p',
+              null,
+              'Create Account'
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return AuthPage;
+}(_react.Component);
+
+;
+
 exports.default = AuthPage;
 
 /***/ }),

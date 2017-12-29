@@ -7,7 +7,7 @@
     "start": "webpack",
     "server": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "jw": "babel-node ./server/app.js --presets es2015,stage-2"
+    "jw": "babel-node ./server/../app.js --presets es2015,stage-2"
   },
   "author": "",
   "license": "ISC",
